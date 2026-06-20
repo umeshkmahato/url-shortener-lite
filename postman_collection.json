@@ -1,0 +1,221 @@
+{
+  "info": {
+    "name": "System Design Mini Projects - Flask APIs",
+    "description": "Task 1/2/3 API requests for local testing.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Task 1 - URL Shortener",
+      "item": [
+        {
+          "name": "POST /shorten",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"url\": \"https://www.linkedin.com/in/umeshkmahato\"\n}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/shorten",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "shorten"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /1 (redirect check)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://127.0.0.1:5000/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /doesnotexist",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://127.0.0.1:5000/doesnotexist",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "doesnotexist"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Task 2 - Rate Limiter",
+      "item": [
+        {
+          "name": "GET /data (alice)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-ID",
+                "value": "alice"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:5004/data",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5004",
+              "path": [
+                "data"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /data (anonymous)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://127.0.0.1:5004/data",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5004",
+              "path": [
+                "data"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Task 3 - Load Balancer",
+      "item": [
+        {
+          "name": "GET /proxy #1",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://127.0.0.1:5005/proxy",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5005",
+              "path": [
+                "proxy"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /proxy #2",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://127.0.0.1:5005/proxy",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5005",
+              "path": [
+                "proxy"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /proxy #3",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://127.0.0.1:5005/proxy",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5005",
+              "path": [
+                "proxy"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /proxy #4",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://127.0.0.1:5005/proxy",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5005",
+              "path": [
+                "proxy"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
